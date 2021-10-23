@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 // import * as $ from 'jquery'
 // import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 const pathUrl = 'https://xmenapiheroku.herokuapp.com/api/characters'
 
@@ -20,7 +21,7 @@ export const Personajes = () => {
   //   color: 'white'
   // }
 
-  const cargarProductos = async () => {
+  const cargarPersonajes = async () => {
 
 
     // LocalStorage
@@ -103,7 +104,7 @@ export const Personajes = () => {
   }
 
   useEffect(() => {
-    cargarProductos()
+    cargarPersonajes()
   }, [])
 
 
@@ -123,10 +124,15 @@ export const Personajes = () => {
               <div className="card">
                 <img src={personaje.img} className="card-img-top" alt={personaje.name} />
                 <div className="card-body">
-                  <h5 className="card-title">{personaje.name} <small>({personaje.alias})</small> </h5>
+                  <h5 className="card-title">
+                    {personaje.name} <small>({personaje.alias})</small>
+                  </h5>
                   <p className="card-text">
                     {personaje.description}
                   </p>
+                  <Link
+                    to={`/personajes/${personaje.id}`}
+                    className="btn btn-primary">Ver mas...</Link>
                 </div>
                 <div className="card-footer">
                   <small className="text-muted">{personaje.powers}</small>
