@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import * as $ from 'jquery'
-import axios from 'axios'
+// import * as $ from 'jquery'
+// import axios from 'axios'
 
 const pathUrl = 'https://xmenapiheroku.herokuapp.com/api/characters'
 
@@ -8,17 +8,17 @@ export const Personajes = () => {
 
   const [listaPersonajes, setListaPersonajes] = useState([])
 
-  const usuario = {
-    id: '123456789',
-    nombre: 'Pedro',
-    email: 'pedro.picapiedra@gmail.com',
-    role: 'admin'
-  }
+  // const usuario = {
+  //   id: '123456789',
+  //   nombre: 'Pedro',
+  //   email: 'pedro.picapiedra@gmail.com',
+  //   role: 'admin'
+  // }
 
-  const conifiguracion = {
-    fondo: 'black',
-    color: 'white'
-  }
+  // const conifiguracion = {
+  //   fondo: 'black',
+  //   color: 'white'
+  // }
 
   const cargarProductos = async () => {
 
